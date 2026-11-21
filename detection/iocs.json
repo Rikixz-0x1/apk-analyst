@@ -1,0 +1,97 @@
+{
+  "sample": {
+    "file": "dv38usdf1_2.4.69_20250926222217.apk",
+    "package": "prod.app_dv38usdf1.com",
+    "label": "DV38",
+    "version_name": "2.4.69",
+    "version_code": 1,
+    "sha256": "63bf80f8e92c61fada10f4bd7acf0cc294a87a9c6af015e445a2c0a477bfc668",
+    "size_bytes": 5027198,
+    "min_sdk": 23,
+    "target_sdk": 34,
+    "signer": {
+      "subject": "C=TW",
+      "serial": "23750b4e",
+      "valid_from": "2019",
+      "valid_to": "2044",
+      "sha256": "6D:CD:C1:B1:7C:E0:83:ED:A1:75:47:49:76:FD:60:1F:AB:16:56:65:F8:76:2D:12:46:F6:47:F8:C9:F8:CB:AB"
+    }
+  },
+  "classification": {
+    "verdict": "high-risk grayware / PUA",
+    "family": "white-label gambling WebView shell",
+    "confidence": "high"
+  },
+  "network": {
+    "merchant_domains": [
+      "12249046.com",
+      "dv38.info",
+      "dv38.dev",
+      "dv38.pro",
+      "dv38.blog"
+    ],
+    "backup_telemetry": [
+      "www2.854819.com:42666"
+    ],
+    "update_check": [
+      "www.gfbwff.com"
+    ],
+    "template_leftovers": [
+      "sit-dayu88.com",
+      "xyfenfa.vip",
+      "datanetwork.cn"
+    ],
+    "url_patterns": [
+      "https://<merchant>.www.gfbwff.com/api/app/latest?os=android",
+      "https://<fast-domain>/m/index.html?affiliateCode=...&gaid=...&fbPixelId=...&tid=..."
+    ]
+  },
+  "firebase": {
+    "project_id": "dv38usdf1-250727"
+  },
+  "android": {
+    "launcher_activity": "prod.apptest.com.activity.X5_Activity",
+    "file_provider_authority": "prod.app_dv38usdf1.com.fileProvider",
+    "js_bridges": [
+      "window.Android",
+      "window.JSInterface",
+      "window.LaunchOpen",
+      "window.LaunchClose",
+      "window.Color",
+      "window.LogOpen",
+      "window.LogClose",
+      "window.LogTest"
+    ],
+    "permissions": [
+      "android.permission.INTERNET",
+      "android.permission.READ_PHONE_STATE",
+      "android.permission.CAMERA",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.POST_NOTIFICATIONS"
+    ],
+    "request_install_packages": false
+  },
+  "paths": [
+    "<external-files>/update.apk",
+    "Downloads/GenericFiles/",
+    "SharedPreferences: device_stats.xml",
+    "SharedPreferences keys: JS_*",
+    "SharedPreferences keys: gaid_<merchant>"
+  ],
+  "behavior": [
+    "loads remote gambling site in permissive WebView",
+    "rotates domains based on reachability",
+    "ignores TLS certificate errors",
+    "allows mixed content and cleartext HTTP",
+    "exposes intent launching and OAuth token callback to JavaScript",
+    "downloads APK files and attempts ACTION_INSTALL_PACKAGE",
+    "collects Android ID / Build-derived UUID and Google Advertising ID",
+    "sends analytics to AppsFlyer, Adjust, Facebook, Firebase and OpenInstall"
+  ],
+  "references": [
+    "https://github.com/Rikixz-0night/china-scam-app-apk"
+  ]
+}
